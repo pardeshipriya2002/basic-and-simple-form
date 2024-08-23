@@ -1,0 +1,22 @@
+<center>
+<h1>BASIC REGISTRATION FORM</h1>
+
+<form method="POST">
+
+{% csrf_token %}
+{{form}}
+
+<button type="submit">SUBMIT</button>
+
+</form>
+{% if data %}
+   {% for i  in data %}
+   {{i.fname}}
+   {{i.lname}}
+   {{i.email}}
+   {{i.contact}}
+   {% endfor %}
+
+{% endif %}   
+
+</center>
